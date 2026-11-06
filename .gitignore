@@ -1,0 +1,32 @@
+# Local and private artifacts
+.env
+.env.*
+!.env.example
+*.sqlite
+*.sqlite3
+*.db
+*.log
+*.pem
+*.key
+*.p12
+*.pfx
+*.bak
+*.dump
+*.zip
+*.7z
+*.rar
+
+# Private implementation
+/backend/
+/prompts/
+/private-prompts/
+/schemas-private/
+/fixtures-private/
+/test-data-private/
+/deploy-private/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
