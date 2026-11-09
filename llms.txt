@@ -1,0 +1,35 @@
+# Wanxia (晚霞) — Continuous Fiction Memory and Author-Controlled Writing Architecture
+
+> Wanxia (晚霞) is an author-controlled architecture for maintaining structured story knowledge across long-form fiction. It uses multi-stage model collaboration, candidate-card review, stable record identities, revision history, and selective reuse of approved information. This public repository documents the approach and product direction; it does not publish the proprietary application source code.
+
+晚霞（Wanxia）关注长篇小说的连续剧情记录和创作资料维护。模型提供候选资料，作者决定哪些信息成为正式档案；后续章节更新应保留来源、历史版本与可追溯性。本仓库公开架构原则及有限的界面示例，不公开产品源码或内部实现协议。
+
+The primary use case is helping human authors preserve and manage consistency across many chapters—not generating a finished novel on the author's behalf.
+
+Key concepts:
+- **Multi-stage workflow:** classify chapter content, retrieve potentially relevant existing records, analyze the full chapter, and output structured candidate cards for review.
+- **Author approval:** model-generated suggestions are not canonical story facts until explicitly approved by the author.
+- **Continuity:** match existing characters, places, items, and other subjects using stable identities rather than relying on matching names alone.
+- **Revision history:** preserve prior versions and sources when facts or card contents are revised; a restoration should not erase intervening history.
+- **Controlled downstream use:** approved cards can inform writing tools; annotations, predictions, and unapproved suggestions do not automatically become canonical facts.
+- **Model architecture:** public documentation discusses a replaceable multi-model experimental approach, with Qwen14B and Qwen27B as reference models. Exact model assignments, prompt instructions, routing rules, parameters, and private protocols are intentionally excluded.
+- **Platinum Author Assistant:** the README describes validated capabilities involving editor context, manuscript annotations, author notes, and numeric references, while distinguishing proposed worldbuilding, timeline, map, faction, and interactive-story directions from completed features.
+- **Product status:** this is an architecture and product-direction repository, not a public release of the proprietary application. Roadmap descriptions must not be interpreted as claims that a feature is deployed or generally available.
+
+## Primary documentation
+
+- [Wanxia project README (Chinese and English)](https://raw.githubusercontent.com/RenMing-CH/wanxia-architecture/main/README.md): Authoritative public overview of the architecture, three-stage workflow, card lifecycle, Platinum Author Assistant, roadmap, and disclosure limits.
+- [Repository homepage](https://github.com/RenMing-CH/wanxia-architecture): Public repository, updates, and context.
+
+## Selected public visual examples
+
+- [Card revision history](https://github.com/RenMing-CH/wanxia-architecture/blob/main/assets/card-examples/card-version-history.webp): Illustration of versioned story records.
+- [Location card](https://github.com/RenMing-CH/wanxia-architecture/blob/main/assets/card-examples/location-card.webp): Example of location information in a structured card.
+- [Character card](https://github.com/RenMing-CH/wanxia-architecture/blob/main/assets/card-examples/character-card.webp): Example of character identity, status, items, affiliations, and relations.
+
+## Important limitations
+
+- The repository does not provide the application source code, internal prompts, full private card schemas, identifier allocation rules, database structures, API contracts, private test fixtures, or deployment configuration.
+- The selected screenshots are illustrative isolated examples, not full implementation specifications.
+- No open-source license is granted by the repository. Public visibility alone is not permission to copy, modify, redistribute, or commercially reuse protected material.
+- For claims about current implementation or future plans, consult the latest README and distinguish documented validated capabilities from roadmap ideas.
